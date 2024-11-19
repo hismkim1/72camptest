@@ -116,7 +116,7 @@ if not st.session_state.logged_in:
 
     # 단계 선택 (중3~고3)
     step_options = ["중3 1학기", "중3 2학기", "고1 1학기", "고1 2학기", "고2 1학기", "고2 2학기", "고3 1학기", "고3 2학기"]  # 학년 및 학기 옵션
-    selected_step = st.select_slider("현재 학년", options=step_options)  # 단계 선택 슬라이더
+    selected_step = st.select_slider("현재 학년을 설정해주세요.", options=step_options)  # 단계 선택 슬라이더
 
     username = st.text_input("사용자 이름")
     password = st.text_input("비밀번호", type="password")
