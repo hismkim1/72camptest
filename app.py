@@ -108,6 +108,16 @@ if not st.session_state.logged_in:
     st.image("src/header.png", use_container_width=True)  # {{ edit_1 }}
 
     st.title("수학 진단 테스트 로그인")
+    
+    # 캠퍼스 선택 추가 (라디오 버튼)
+    campus_options = ["서초캠퍼스", "강화캠퍼스", "안성캠퍼스"]
+    selected_campus = st.radio("캠퍼스를 선택하세요:", campus_options)  # 캠퍼스 선택 라디오 버튼
+
+
+    # 단계 선택 (중3~고3)
+    step_options = ["중3 1학기", "중3 2학기", "고1 1학기", "고1 2학기", "고2 1학기", "고2 2학기", "고3 1학기", "고3 2학기"]  # 학년 및 학기 옵션
+    selected_step = st.select_slider("현재 학년", options=step_options)  # 단계 선택 슬라이더
+
     username = st.text_input("사용자 이름")
     password = st.text_input("비밀번호", type="password")
 
